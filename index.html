@@ -206,7 +206,7 @@
                 }
 
                 //Khi tiến độ bài hát thay đổi
-                audio.ontimeupdate = function() {                 
+                audio.ontimeupdate = function() {
                     if(audio.duration){
                         const progressPercent = Math.floor(audio.currentTime / audio.duration * 100)
                         progress.value = progressPercent
@@ -221,7 +221,7 @@
 
                 //Khi next song
                 nextBtn.onclick = function() {
-                    if(this.isRandom) {
+                    if(app.isRandom) {
                         app.playRandomSong()
                     }else{
                         app.nextSong();
@@ -231,7 +231,7 @@
 
                 //Khi prev song
                 prevBtn.onclick = function() {
-                    if(this.isRandom) {
+                    if(app.isRandom) {
                         app.playRandomSong()
                     }else{
                         app.prevSong();
